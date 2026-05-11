@@ -1,0 +1,115 @@
+export default function PortfolioWebsite() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-800 to-pink-600 text-white font-sans">
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center text-center px-6 py-24">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="Profile"
+          className="w-36 h-36 rounded-full border-4 border-white shadow-2xl mb-6"
+        />
+
+        <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-wide">
+          Nicole B. Villanueva
+        </h1>
+
+        <p className="text-lg md:text-2xl max-w-2xl text-gray-200">
+          BSIT 2nd Year • Section A
+        </p>
+
+        <div className="mt-8 flex gap-4">
+          <button className="bg-white text-purple-700 px-6 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition">
+            View Projects
+          </button>
+
+          <button className="border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-purple-700 transition">
+            My Information
+          </button>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="px-6 md:px-20 py-16 bg-white/10 backdrop-blur-md">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-4xl font-bold mb-4">About Me</h2>
+            <p className="text-lg leading-relaxed text-gray-200">
+              Hello! I am Nicole B. Villanueva, a BSIT 2nd Year Section A student who is passionate about technology, creativity, and learning new skills. I enjoy exploring modern web design and improving my knowledge in the field of Information Technology. I believe in working hard, staying positive, and trusting God in every journey of life.
+            </p>
+          </div>
+
+          <div className="bg-white/10 rounded-3xl p-8 shadow-2xl">
+            <h3 className="text-2xl font-semibold mb-4">Personal Information</h3>
+            <div className="flex flex-wrap gap-3">
+              {["Birthday: November 2, 2005", "Course: BSIT", "Year & Section: 2nd Year - Section A", "Quote: Trust in the Lord for this is right"].map((skill) => (
+                <span
+                  key={skill}
+                  className="bg-white text-purple-700 px-4 py-2 rounded-full font-medium"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section className="px-6 md:px-20 py-20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            About Me
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Student Portfolio",
+                desc: "Personal portfolio showcasing my information and background.",
+              },
+              {
+                title: "Education",
+                desc: "Bachelor of Science in Information Technology.",
+              },
+              {
+                title: "Life Quote",
+                desc: "“Trust in the Lord for this is right.”",
+              },
+            ].map((project, index) => (
+              <div
+                key={index}
+                className="bg-white/10 p-6 rounded-3xl shadow-2xl hover:scale-105 transition"
+              >
+                <div className="h-40 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-500 mb-4"></div>
+                <h3 className="text-2xl font-semibold mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-gray-200">{project.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="px-6 py-20 bg-black/20 text-center">
+        <h2 className="text-4xl font-bold mb-6">Contact Me</h2>
+        <p className="text-lg text-gray-200 mb-8">
+          Thank you for visiting my personal portfolio website.
+        </p>
+
+        <div className="mt-6 text-lg text-gray-200 space-y-2">
+          <p><strong>Name:</strong> Nicole B. Villanueva</p>
+          <p><strong>Course:</strong> BSIT 2nd Year - Section A</p>
+          <p><strong>Birthday:</strong> November 2, 2005</p>
+          <p><strong>Quote:</strong> Trust in the Lord for this is right</p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-6 bg-black/30 text-gray-300">
+        © 2026 Nicole B. Villanueva | Personal Portfolio
+      </footer>
+    </div>
+  );
+}
